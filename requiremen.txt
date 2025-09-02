@@ -1,0 +1,11 @@
+accelerate
+timm
+pytz
+ntplib
+opencv-python
+transformers
+scipy
+scikit-learn
+matplotlib
+rich
+prettytable
