@@ -99,7 +99,7 @@ def main():
     parser = argparse.ArgumentParser(description="Generate pseudo labels for COD datasets using DINOv2")
     parser.add_argument('--dataset', type=str, default='TR-CAMO+TR-COD10K', 
                        help='Dataset name (can use + to combine multiple datasets)')
-    parser.add_argument('--image_path', type=str, default='/data/ywq/dataset/COD/{}/im',
+    parser.add_argument('--image_path', type=str, default='./dataset/RefCOD/{}/im',
                        help='Template path for images (use {} as placeholder for dataset name)')
     parser.add_argument('--cache_path', type=str, default='./datasets/cache/pseudo_label_cache/',
                        help='Path to save cache files')
