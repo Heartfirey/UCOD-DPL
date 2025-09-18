@@ -131,7 +131,7 @@ class ImageIO(BaseFileIO):
 
     def list_dir_image(self, path: Union[Path, str]) -> List[str]:
         if type(path) == str:
-            path = Path(path)
+            path = Path(path).resolve()
         all_image_files = sorted(list(path.glob('**/*')))
         full_image_paths = []
         for file in all_image_files:

@@ -29,7 +29,7 @@
 ### Environment Setup
 
 ```
-conda create -n scout python==3.9 -y && conda activate coral
+conda create -n coral python==3.9 -y && conda activate coral
 pip install -r requirement.txt
 ```
 

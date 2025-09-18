@@ -167,7 +167,6 @@ cython_debug/
 
 # Project Specific
 tmp/
-datasets/cache/
 *.pt
 /work_dir*/*
 *.tar.gz
@@ -180,6 +179,5 @@ test.py
 __pycache__/
 .codegpt
 outputs/*
-datasets/*
 tmp/*
 emeasure_comparison*

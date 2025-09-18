@@ -1,7 +1,7 @@
 cfg = dict(
     dataset_cfg = dict(
         cache_dir='./datasets/cache/look_twice',
-        dataset_dir='/data/ywq/dataset/RefCOD',
+        dataset_dir='./datasets/RefCOD',
         trainset_cfg = dict(
             DATASET='TR-CAMO+TR-COD10K',
             require_label=False,
