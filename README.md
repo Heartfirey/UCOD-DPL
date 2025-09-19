@@ -13,6 +13,8 @@
 
 </div>
 
+> If you are looking for the code of the paper “SCOUT: Semi-supervised Camouflaged Object Detection by Utilizing Text and Adaptive Data Selection”, please visit the **this [repository](https://github.com/Heartfirey/SCOUT)**.
+
 ## Updates
 
 - [September 2, 2025] UCOD-DPL Code released. The full training code of `CORAL` will be released soon.
