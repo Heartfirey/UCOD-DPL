@@ -37,7 +37,7 @@ pip install -r requirement.txt
 
 Downloading dataset: [GoogleDrive](https://drive.google.com/drive/folders/19MaIVAcqr8sIv0R1hIq7MZhPqO-9_s8v?usp=drive_link) and moving it into `./datasets`.
 
-Downloading pseudo labels from [GoogleDrive](https://drive.google.com/file/d/149Dh5OQnF1JBO2gzBkM4cj2jnJScRBys/view?usp=sharing) and moving it into `./datasets/cache`
+Downloading pseudo labels from [GoogleDrive](https://drive.google.com/file/d/149Dh5OQnF1JBO2gzBkM4cj2jnJScRBys/view?usp=sharing) and moving it into `./datasets/cache/pseudo_label_cache`
 
 
 

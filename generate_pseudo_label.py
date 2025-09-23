@@ -99,7 +99,7 @@ def main():
     parser = argparse.ArgumentParser(description="Generate pseudo labels for COD datasets using DINOv2")
     parser.add_argument('--dataset', type=str, default='TR-CAMO+TR-COD10K', 
                        help='Dataset name (can use + to combine multiple datasets)')
-    parser.add_argument('--image_path', type=str, default='/data/ywq/dataset/COD/{}/im',
+    parser.add_argument('--image_path', type=str, default='./datasets/RefCOD/{}/im',
                        help='Template path for images (use {} as placeholder for dataset name)')
     parser.add_argument('--cache_path', type=str, default='./datasets/cache/pseudo_label_cache/',
                        help='Path to save cache files')
@@ -142,15 +142,6 @@ def main():
         try:
             mask = generate_mask(file_path, 0.6)
             mask_list.append(mask)
-
-            upsampled_tensor = F.interpolate(mask.unsqueeze(0), size=(68,68), mode='nearest').squeeze(0)
-            output_image_data = upsampled_tensor.squeeze().numpy() # 移除维度，得到 (68, 68)
-            output_image_data = (output_image_data * 255).astype(np.uint8) # 转换为 0-255 的整数类型
-            img = Image.fromarray(output_image_data)
-            output_dir = "/data/ywq/USCOD_newest/datasets/cache/visulization"
-            os.makedirs(output_dir, exist_ok=True)
-            output_filepath = os.path.join(output_dir, os.path.basename(file_path))
-            img.save(output_filepath)
         except Exception as e:
             print(f"Error processing {file_path}: {e}")
             continue
